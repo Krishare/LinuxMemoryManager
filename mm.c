@@ -1,32 +1,4 @@
-/*
- * =====================================================================================
- *
- *       Filename:  mm.c
- *
- *    Description:  This file implements the routine for Memory Manager 
- *
- *        Version:  1.0
- *        Created:  01/30/2020 10:31:41 AM
- *       Revision:  none
- *       Compiler:  gcc
- *
- *         Author:  Er. Abhishek Sagar, Juniper Networks (https://csepracticals.wixsite.com/csepracticals), sachinites@gmail.com
- *        Company:  Juniper Networks
- *
- *        This file is part of the Linux Memory Manager distribution (https://github.com/sachinites) 
- *        Copyright (c) 2019 Abhishek Sagar.
- *        This program is free software: you can redistribute it and/or modify it under the terms of the GNU General 
- *        Public License as published by the Free Software Foundation, version 3.
- *        
- *        This program is distributed in the hope that it will be useful, but
- *        WITHOUT ANY WARRANTY; without even the implied warranty of
- *        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- *        General Public License for more details.
- *
- *        visit website : https://csepracticals.wixsite.com/csepracticals for more courses and projects
- *                                  
- * =====================================================================================
- */
+
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -89,7 +61,35 @@ mm_get_available_page_from_heap_segment(){
 vm_page_t *
 mm_get_available_page_from_heap_segment(){
 
-    vm_page_t *vm_page_curr = NULL;
+    vm_page_t *vm_page_curr = NU/*
+ * =====================================================================================
+ *
+ *       Filename:  mm.h
+ *
+ *    Description:  This file defines the public APIs and Data structures used for Memory Manager
+ *
+ *        Version:  1.0
+ *        Created:  01/30/2020 10:11:20 AM
+ *       Revision:  none
+ *       Compiler:  gcc
+ *
+ *         Author:  Er. Abhishek Sagar, Juniper Networks (https://csepracticals.wixsite.com/csepracticals), sachinites@gmail.com
+ *        Company:  Juniper Networks
+ *
+ *        This file is part of the Linux Memory Manager distribution (https://github.com/sachinites) 
+ *        Copyright (c) 2019 Abhishek Sagar.
+ *        This program is free software: you can redistribute it and/or modify it under the terms of the GNU General 
+ *        Public License as published by the Free Software Foundation, version 3.
+ *        
+ *        This program is distributed in the hope that it will be useful, but
+ *        WITHOUT ANY WARRANTY; without even the implied warranty of
+ *        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ *        General Public License for more details.
+ *
+ *        visit website : https://csepracticals.wixsite.com/csepracticals for more courses and projects
+ *                                  
+ * =====================================================================================
+ */LL;
     /*No free Page could be found, expand heap segment*/
     vm_page_curr = (vm_page_t *)sbrk(GB_SYSTEM_PAGE_SIZE);
     return vm_page_curr;
@@ -183,7 +183,35 @@ mm_instantiate_new_page_family(
     }
 
     if(!gb_no_of_vm_families_registered){
-        
+        /*
+ * =====================================================================================
+ *
+ *       Filename:  mm.h
+ *
+ *    Description:  This file defines the public APIs and Data structures used for Memory Manager
+ *
+ *        Version:  1.0
+ *        Created:  01/30/2020 10:11:20 AM
+ *       Revision:  none
+ *       Compiler:  gcc
+ *
+ *         Author:  Er. Abhishek Sagar, Juniper Networks (https://csepracticals.wixsite.com/csepracticals), sachinites@gmail.com
+ *        Company:  Juniper Networks
+ *
+ *        This file is part of the Linux Memory Manager distribution (https://github.com/sachinites) 
+ *        Copyright (c) 2019 Abhishek Sagar.
+ *        This program is free software: you can redistribute it and/or modify it under the terms of the GNU General 
+ *        Public License as published by the Free Software Foundation, version 3.
+ *        
+ *        This program is distributed in the hope that it will be useful, but
+ *        WITHOUT ANY WARRANTY; without even the implied warranty of
+ *        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ *        General Public License for more details.
+ *
+ *        visit website : https://csepracticals.wixsite.com/csepracticals for more courses and projects
+ *                                  
+ * =====================================================================================
+ */
         vm_page_family = (vm_page_family_t *)sbrk(GB_SYSTEM_PAGE_SIZE);
         remaining_bytes_in_a_page = GB_SYSTEM_PAGE_SIZE - sizeof(vm_page_family_t);
         gb_hsba = (void *)
